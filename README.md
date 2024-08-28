@@ -24,8 +24,11 @@ Link model 2: [Clinical-BR-Mistral-7B-v0.2](https://huggingface.co/pucpr-br/Clin
 
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
+
 import torch
+
 from huggingface_hub import login
+
 login()
 
 
@@ -33,13 +36,17 @@ model_id = "pucpr-br/Clinical-BR-LlaMA-2-7B" or "pucpr-br/Clinical-BR-Mistral-7B
 
 
 tokenizer = AutoTokenizer.from_pretrained(model_id)
+
 model     = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True)
 
 prompt = "Paciente admitido com angina instável, progredindo para infarto agudo do miocárdio (IAM) inferior no primeiro dia de internação; encaminhado para unidade de hemodinâmica, onde foi feita angioplastia com implante de stent na ponte d "	
 
 inputs = tokenizer(prompt, return_tensors="pt", return_token_type_ids=False)
+
 outputs = model.generate(**inputs, max_new_tokens=90)
+
 Resposta
+
 print(tokenizer.batch_decode(outputs, skip_special_tokens=True)[0])
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
