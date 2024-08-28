@@ -26,9 +26,7 @@ Link model 2: [Clinical-BR-Mistral-7B-v0.2](https://huggingface.co/pucpr-br/Clin
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 import torch
-
 from huggingface_hub import login
-
 login()
 
 
@@ -45,14 +43,12 @@ inputs = tokenizer(prompt, return_tensors="pt", return_token_type_ids=False)
 
 outputs = model.generate(**inputs, max_new_tokens=90)
 
-Resposta
-
 print(tokenizer.batch_decode(outputs, skip_special_tokens=True)[0])
----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 Resultado:
 "Paciente admitido com angina instável, progredindo para infarto agudo do miocárdio (IAM) inferior no primeiro dia de internação; encaminhado para unidade de hemodinâmica, onde foi feita angioplastia com implante de stent na ponte dorsal da arteria coronária direita. Paciente apresentou IAM em 1º dia de internação, com desvio de 60% no segmento proximal, com angiografia de alta qualidade. Anteriormente, paciente havia apresentado episódios de angina instável, em 2003, com angiografia com desvio de 70% no segment..."
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
