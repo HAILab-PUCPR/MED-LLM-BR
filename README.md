@@ -37,7 +37,7 @@ print(inputs)
 
 outputs = model.generate(**inputs, max_new_tokens=90)
 
-#Resposta
+Resposta
 print(tokenizer.batch_decode(outputs, skip_special_tokens=True)[0])
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
