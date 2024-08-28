@@ -17,8 +17,9 @@ Mistral: Mistral is another advanced language model designed to enhance performa
 
 ## How to use or models with HuggingFace
 
-Link model 1: Clinical-BR-LlaMA-2-7B [https://huggingface.co/pucpr-br/Clinical-BR-LlaMA-2-7B]
-Link model 2: Clinical-BR-Mistral-7B-v0.2 [https://huggingface.co/pucpr-br/Clinical-BR-Mistral-7B-v0.2]
+Link model 1: [Clinical-BR-LlaMA-2-7B](https://huggingface.co/pucpr-br/Clinical-BR-LlaMA-2-7B)
+Link model 2: [Clinical-BR-Mistral-7B-v0.2](https://huggingface.co/pucpr-br/Clinical-BR-Mistral-7B-v0.2)
+
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
