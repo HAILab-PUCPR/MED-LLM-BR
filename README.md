@@ -1,6 +1,4 @@
 
-![Screenshot 2024-08-28 at 23-24-31 c62a3e07-8edb-47f5-a66c-bb2ec85da7c7 webp (WEBP Image 1024 × 1024 pixels) — Scaled (94%)](https://github.com/user-attachments/assets/bbc18d17-7650-4304-99dc-18fae2296831)
-
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # MED-LLM-BR: A Large Language Model for Clinical Text Generation in Portuguese
 
@@ -27,31 +25,27 @@ Link model 1: [Clinical-BR-LlaMA-2-7B](https://huggingface.co/pucpr-br/Clinical-
 Link model 2: [Clinical-BR-Mistral-7B-v0.2](https://huggingface.co/pucpr-br/Clinical-BR-Mistral-7B-v0.2)
 
 
+~~~bash
 from transformers import AutoModelForCausalLM, AutoTokenizer
-
 import torch
+
 from huggingface_hub import login
 login()
 
-
 model_id = "pucpr-br/Clinical-BR-LlaMA-2-7B" or "pucpr-br/Clinical-BR-Mistral-7B-v0.2"
-
-
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 model     = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True)
-
 prompt = "Paciente admitido com angina instável, progredindo para infarto agudo do miocárdio (IAM) inferior no primeiro dia de internação; encaminhado para unidade de hemodinâmica, onde foi feita angioplastia com implante de stent na ponte d "	
-
 inputs = tokenizer(prompt, return_tensors="pt", return_token_type_ids=False)
-
 outputs = model.generate(**inputs, max_new_tokens=90)
-
 print(tokenizer.batch_decode(outputs, skip_special_tokens=True)[0])
-
+~~~
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Resultado:
 "Paciente admitido com angina instável, progredindo para infarto agudo do miocárdio (IAM) inferior no primeiro dia de internação; encaminhado para unidade de hemodinâmica, onde foi feita angioplastia com implante de stent na ponte dorsal da arteria coronária direita. Paciente apresentou IAM em 1º dia de internação, com desvio de 60% no segmento proximal, com angiografia de alta qualidade. Anteriormente, paciente havia apresentado episódios de angina instável, em 2003, com angiografia com desvio de 70% no segment..."
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
