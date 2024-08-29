@@ -1,3 +1,7 @@
+![Screenshot from 2024-08-28 23-57-07](https://github.com/user-attachments/assets/638ba60d-606b-4b5d-a549-abd411f9886e)
+<img src="https://github.com/user-attachments/assets/638ba60d-606b-4b5d-a549-abd411f9886e" width="300"/>
+
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # MED-LLM-BR: A Large Language Model for Clinical Text Generation in Portuguese
