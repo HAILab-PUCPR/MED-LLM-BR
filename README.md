@@ -1,3 +1,7 @@
+
+![Screenshot 2024-08-28 at 23-24-31 c62a3e07-8edb-47f5-a66c-bb2ec85da7c7 webp (WEBP Image 1024 × 1024 pixels) — Scaled (94%)](https://github.com/user-attachments/assets/bbc18d17-7650-4304-99dc-18fae2296831)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # MED-LLM-BR: A Large Language Model for Clinical Text Generation in Portuguese
 
 ## Introduction:
@@ -51,17 +55,4 @@ Resultado:
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
-
-
 # Citation:
-@INPROCEEDINGS{,
-  author={João Gabriel de Souza Pinto,Andrey Rodrigues de Freitas, Anderson Carlos Gomes Martins,Caroline Midori Rozza Sawazaki, Caroline Vidal, Lucas Emanuel Silva e},
-  booktitle={}, 
-  title={Developing Resource-Efficient Clinical LLMs for Brazilian Portuguese}, 
-  year={2024},
-  volume={},
-  number={},
-  pages={},
-  doi={}
-}
