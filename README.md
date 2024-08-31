@@ -43,6 +43,20 @@ outputs = model.generate(**inputs, max_new_tokens=90)
 print(tokenizer.batch_decode(outputs, skip_special_tokens=True)[0])
 ~~~
 
+#### How to use the models with ollama
+
+Model Clinical-BR-LlaMA-2-7B:
+
+~~~bash
+$ ollama run cabelo/clinical-br-llama-2-7b
+~~~
+
+Model Clinical-BR-Mistral-7B-v0.2:
+
+~~~bash
+$ ollama run cabelo/clinical-br-mistral-7b-0.2
+~~~
+
 #### Provisional Citation:
 ```
 @inproceedings{pinto2024clinicalLLMs,
