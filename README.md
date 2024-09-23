@@ -56,6 +56,15 @@ Model Clinical-BR-Mistral-7B-v0.2:
 ~~~bash
 $ ollama run cabelo/clinical-br-mistral-7b-0.2
 ~~~
+#### How to use the OpenVINO models with HuggingFace
+
+[_Alessandro de Oliveira Faria_](https://github.com/cabelo) (Intel Innovator) is responsible for maintaining the quantization (fp16 and int8) of the MED-LLM-BR model for Intel OpenVINO technology, ensuring optimization and efficiency in production environments.
+
+Link model FP16 : [Clinical-BR-LlaMA-2-7B-fp16-ov](https://huggingface.co/cabelo/Clinical-BR-LlaMA-2-7B-fp16-ov)
+
+Link model Int8  : [Clinical-BR-LlaMA-2-7B-int8-ov](https://huggingface.co/cabelo/Clinical-BR-LlaMA-2-7B-int8-ov) 
+
+Source and more information in [MED-LLM-BR-openvino](https://github.com/cabelo/MED-LLM-BR-openvino)
 
 #### Provisional Citation:
 ```
